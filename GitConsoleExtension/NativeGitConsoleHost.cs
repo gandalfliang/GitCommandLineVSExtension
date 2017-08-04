@@ -22,7 +22,7 @@ namespace GitConsoleExtension
                 if (dir != null) Directory.SetCurrentDirectory(dir);
             }
 
-            _process = new Process {StartInfo = new ProcessStartInfo(Config.Instance.MinttyPath) };
+            _process = new Process {StartInfo = new ProcessStartInfo(Config.Instance.MinttyPath,"--nodaemon") };
             _process.Start();
             _handler = IntPtr.Zero;
             if (_process.WaitForInputIdle())

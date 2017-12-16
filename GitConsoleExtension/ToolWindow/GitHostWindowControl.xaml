@@ -10,8 +10,8 @@
              Name="MyToolWindow">
     <Grid Name="RootGrid">
         <StackPanel Name="InfoStackpanel" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
-            <Button Content="选择Mintty" Width="100" Height="30" Click="Select_Mintty_clicked"/>
-            <TextBlock Foreground="{DynamicResource VsBrush.WindowText}" TextWrapping="Wrap" Margin="20" Text="请先选择Mintty程序，该程序一般在Git安装目录下，例如Git/usr/bin"/>
+            <Button Content="Choose Mintty" Width="120" Height="30" Click="Select_Mintty_clicked"/>
+            <TextBlock Foreground="{DynamicResource VsBrush.WindowText}" TextWrapping="Wrap" Margin="20" Text="Please tell me where your mintty.exe is. You can find it in Git bash installed folder (Git/usr/bin)"/>
         </StackPanel>
     </Grid>
 </UserControl>

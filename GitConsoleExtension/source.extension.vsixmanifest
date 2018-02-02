@@ -3,7 +3,7 @@
     <Metadata>
         <Identity Id="GitConsoleExtension.Microsoft.e0f0234e-d617-43c3-b73c-8758369d9cb7" Version="1.0" Language="en-US" Publisher="Gandalfliang" />
         <DisplayName>Gitsoler</DisplayName>
-        <Description xml:space="preserve">Gitsoler intergrates Git Bash Console window into Visual Studio like any other tool window.</Description>
+        <Description xml:space="preserve">Gitsoler integrates Git Bash Console window into Visual Studio like any other tool window.</Description>
         <ReleaseNotes>Version 1</ReleaseNotes>
         <Icon>gwindows_logo.png</Icon>
         <PreviewImage>gwindows_logo.png</PreviewImage>

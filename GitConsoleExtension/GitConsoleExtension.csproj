@@ -75,6 +75,9 @@
     <Compile Include="Config.cs" />
     <Compile Include="NativeGitConsoleHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolWindow\ConsoleHostControl.xaml.cs">
+      <DependentUpon>ConsoleHostControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ToolWindow\GitHostWindow.cs" />
     <Compile Include="ToolWindow\GitHostWindowCommand.cs" />
     <Compile Include="ToolWindow\GitHostWindowControl.xaml.cs">
@@ -105,6 +108,10 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ToolWindow\ConsoleHostControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ToolWindow\GitHostWindowControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

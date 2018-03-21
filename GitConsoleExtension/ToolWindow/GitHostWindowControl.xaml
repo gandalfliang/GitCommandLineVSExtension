@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:gitConsoleExtension="clr-namespace:GitConsoleExtension"
              Background="{DynamicResource VsBrush.Window}"
              Foreground="{DynamicResource VsBrush.WindowText}"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
              Name="MyToolWindow">
     <Grid Name="RootGrid">
+        <gitConsoleExtension:ConsoleHostControl x:Name="ConsoleHost"/>
         <StackPanel Name="InfoStackpanel" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
             <Button Content="Choose Mintty" Width="120" Height="30" Click="Select_Mintty_clicked"/>
             <TextBlock Foreground="{DynamicResource VsBrush.WindowText}" TextWrapping="Wrap" Margin="20" Text="Please tell me where your mintty.exe is. You can find it in Git bash installed folder (Git/usr/bin)"/>

@@ -58,6 +58,14 @@ namespace GitConsoleExtension
 
             this.InvalidateVisual();
         }
+
+        public void Reset()
+        {
+            _process?.CloseMainWindow();
+            _process?.Close();
+            _process?.Dispose();
+            Dispose();
+        }
     }
 
     public static class Win32

@@ -23,6 +23,7 @@ namespace GitConsoleExtension
     [Guid("bc7b9662-5078-4385-9d4d-002d7e4fd1ea")]
     public class GitHostWindow : ToolWindowPane
     {
+        private readonly GitHostWindowControl _content;
         /// <summary>
         /// Initializes a new instance of the <see cref="GitHostWindow"/> class.
         /// </summary>
@@ -33,7 +34,14 @@ namespace GitConsoleExtension
             // This is the user control hosted by the tool window; Note that, even if this class implements IDisposable,
             // we are not calling Dispose on this object. This is because ToolWindowPane calls Dispose on
             // the object returned by the Content property.
-            this.Content = new GitConsoleExtension.GitHostWindowControl();
+            _content= new GitConsoleExtension.GitHostWindowControl();
+            this.Content = _content;
+        }
+
+        protected override void OnClose()
+        {
+            _content?.Clean();
+            base.OnClose();
         }
     }
 }

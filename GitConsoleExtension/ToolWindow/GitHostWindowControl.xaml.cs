@@ -16,7 +16,6 @@ namespace GitConsoleExtension
     /// </summary>
     public partial class GitHostWindowControl : UserControl
     {
-        private NativeGitConsoleHost _gitHost;
         /// <summary>
         /// Initializes a new instance of the <see cref="GitHostWindowControl"/> class.
         /// </summary>
@@ -35,16 +34,7 @@ namespace GitConsoleExtension
             }
             else
             {
-                LoadMinttyHost();
-            }
-        }
-
-        private void LoadMinttyHost()
-        {
-            if (_gitHost == null)
-            {
-                _gitHost = new NativeGitConsoleHost();
-                RootGrid.Children.Add(_gitHost);
+                ConsoleHost.LoadMinttyHost();
             }
         }
 
@@ -57,9 +47,14 @@ namespace GitConsoleExtension
                 if (dialog.SafeFileName == "mintty.exe")
                 {
                     Config.Instance.MinttyPath = dialog.FileName;
-                    LoadMinttyHost();
+                    ConsoleHost.LoadMinttyHost();
                 }
             }
+        }
+
+        public void Clean()
+        {
+            ConsoleHost.Clean();
         }
     }
 }
